@@ -64,14 +64,6 @@ export default class RichTextToolbar extends Component {
     this.setState({keyboardSpacing: e.endCoordinates.height})
   }
 
-  componentWillReceiveProps(newProps) {
-    const actions = newProps.actions ? newProps.actions : defaultActions;
-    this.setState({
-      actions,
-      ds: this.state.ds.cloneWithRows(this.getRows(actions, this.state.selectedItems))
-    });
-  }
-
   getRows(actions, selectedItems) {
     return actions.map((action) => {return {action, selected: selectedItems.includes(action)};});
   }
@@ -88,6 +80,14 @@ export default class RichTextToolbar extends Component {
         this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide);
       }
     }
+  }
+
+  componentDidUpdate(prevProps) {
+    const actions = this.props.actions ? this.props.actions : defaultActions;
+    this.setState({
+      actions,
+      ds: this.state.ds.cloneWithRows(this.getRows(actions, this.state.selectedItems))
+    });
   }
 
   componentWillUnmount() {
