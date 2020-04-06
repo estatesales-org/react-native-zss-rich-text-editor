@@ -1126,6 +1126,11 @@
 				zss_editor.enabledEditingItems();
 			}
 
+			zss_editor.setStrong = function() {
+				document.execCommand('strong', false, null);
+				zss_editor.enabledEditingItems();
+			}
+
 			zss_editor.setItalic = function() {
 				document.execCommand('italic', false, null);
 				zss_editor.enabledEditingItems();
@@ -1498,6 +1503,9 @@
 				var items = [];
 				if (zss_editor.isCommandEnabled('bold')) {
 					items.push('bold');
+				}
+				if (zss_editor.isCommandEnabled('strong')) {
+					items.push('strong');
 				}
 				if (zss_editor.isCommandEnabled('italic')) {
 					items.push('italic');

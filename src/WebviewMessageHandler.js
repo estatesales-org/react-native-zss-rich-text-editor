@@ -34,6 +34,9 @@ export const InjectedMessageHandler = `
         case '${actions.setBold}':
           zss_editor.setBold();
           break;
+        case '${actions.setStrong}':
+          zss_editor.setStrong();
+          break;
         case '${actions.setItalic}':
           zss_editor.setItalic();
           break;
