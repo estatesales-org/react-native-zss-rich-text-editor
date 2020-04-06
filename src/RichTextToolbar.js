@@ -5,7 +5,7 @@ import {actions} from './const';
 
 const defaultActions = [
   actions.insertImage,
-  actions.setBold,
+  actions.setStrong,
   actions.setItalic,
   actions.insertBulletsList,
   actions.insertOrderedList,
@@ -16,6 +16,7 @@ function getDefaultIcon() {
   const texts = {};
   texts[actions.insertImage] = require('../img/icon_format_media.png');
   texts[actions.setBold] = require('../img/icon_format_bold.png');
+  texts[actions.setStrong] = require('../img/icon_format_bold.png');
   texts[actions.setItalic] = require('../img/icon_format_italic.png');
   texts[actions.insertBulletsList] = require('../img/icon_format_ul.png');
   texts[actions.insertOrderedList] = require('../img/icon_format_ol.png');
@@ -173,6 +174,7 @@ export default class RichTextToolbar extends Component {
   _onPress(action) {
     switch(action) {
       case actions.setBold:
+      case actions.setStrong:
       case actions.setItalic:
       case actions.insertBulletsList:
       case actions.insertOrderedList:

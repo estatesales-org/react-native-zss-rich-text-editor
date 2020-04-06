@@ -76,6 +76,7 @@ The editor component. Simply place this component in your view hierarchy to rece
 
 *  `setBold() `
 *  `setItalic()`
+*  `setStrong() `
 *  `setUnderline() `
 *  `heading1() `
 *  `heading2() `
@@ -174,7 +175,7 @@ Other props supported by the `RichTextToolbar` component are:
 
 	An `array` of `actions` to be provided by this toolbar. The default actions are: 
 	* `actions.insertImage`
-  	* `actions.setBold`
+  	* `actions.setStrong`
   	* `actions.setItalic`
   	* `actions.insertBulletsList`
   	* `actions.insertOrderedList`
