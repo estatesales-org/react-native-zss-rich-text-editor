@@ -237,6 +237,7 @@ This is a set of consts of all supported actions. These will be passed in arrays
 	  	focusContent: 'FOCUS_CONTENT',
 		
 	  	setBold: 'bold',
+	  	setStrong: 'strong',
 	  	setItalic: 'italic',
 	  	setUnderline: 'underline',
 	  	heading1: 'h1',
